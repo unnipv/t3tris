@@ -34,7 +34,7 @@ var grid_ob = [[[null,null,null,null],[null,null,null,null],[null,null,null,null
 
 
 func _process(delta):
-	for i in range(1,13):
+	for i in range(0,13):
 		var layer_full = true
 		for j in range(4):
 			for k in range(4):

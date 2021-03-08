@@ -38,12 +38,15 @@ func move():
 				should_move['right'] = true
 		else:
 			should_move['right'] = false
+#			and level.grid[floor((pos.y-1)/2)][floor((pos.z-1)/2)][floor(pos.x/2)] == 0 and level.grid[floor((pos.y-1)/2)][floor((pos.z-1)/2)][floor((pos.x-1)/2)] == 0 and level.grid[floor((pos.y-1)/2)][floor((pos.z+1)/2)][floor((pos.x-1)/2)] == 0 and level.grid[floor((pos.y-1)/2)][floor((pos.z+1)/2)][floor(pos.x/2)] == 0 and level.grid[floor((pos.y-1)/2)][floor((pos.z)/2)][floor((pos.x+1)/2)] == 0 and level.grid[floor((pos.y-1)/2)][floor(pos.z/2)][floor((pos.x-1)/2)] == 0 and level.grid[floor((pos.y-1)/2)][floor((pos.z-1)/2)][floor((pos.x+1)/2)] == 0 and level.grid[floor((pos.y-1)/2)][floor((pos.z+1)/2)][floor((pos.x+1)/2)] == 0:
 		if pos.y >= 1.1:
-			if level.grid[floor((pos.y-2)/2)][floor(pos.z/2)][floor(pos.x/2)] == 0:
+			if level.grid[floor((pos.y-1)/2)][floor(pos.z/2)][floor(pos.x/2)] == 0: 
+				print(floor((pos.y-1)/2))
 				should_move['down'] = true
 		else:
 			should_move['down'] = false
 	for cube in cubes:
+		print(cube)
 		var pos = cube.global_transform.origin
 		if pos.z < 1:
 			should_move['backward'] = false
@@ -75,7 +78,7 @@ func move():
 #!flags['forward'] and !flags['backward'] and !flags['left'] and !flags['right'] and 
 func try_settle(flags):
 	var cubes = get_children()
-	if !flags['down']:
+	if not flags['down']:
 		for cube in cubes:
 			var pos = cube.global_transform.origin
 			level.grid_ob[floor(pos.y/2)][floor(pos.z/2)][floor(pos.x/2)] = cube

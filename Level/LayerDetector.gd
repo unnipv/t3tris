@@ -18,7 +18,7 @@ func _process(delta):
 func clear_layer(detectors):
 	for obj in detectors:
 		if obj.get_collider() != null:
-			if obj.get_collider().get_owner().has_method("unlock_movement"):
-				obj.get_collider().get_owner().unlock_movement()
+#			if obj.get_collider().get_owner().has_method("unlock_movement"):
+#				obj.get_collider().get_owner().unlock_movement()
 			obj.get_collider().free()
 			
