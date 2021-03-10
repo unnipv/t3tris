@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://GFX/background.jpg" type="Texture" id=1]
+[ext_resource path="res://GFX/LcdSolid-VPzB.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 48
+extra_spacing_space = 1
+font_data = ExtResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -153.0
+margin_bottom = -480.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 76.9412
+margin_top = 27.0045
+margin_right = 180.941
+margin_bottom = -52.9955
+custom_constants/separation = 35
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="NinePatchRect/HBoxContainer"]
+margin_right = 234.0
+margin_bottom = 65.0
+custom_fonts/font = SubResource( 1 )
+text = "TETRIS"
+
+[node name="score" type="Label" parent="NinePatchRect/HBoxContainer"]
+margin_left = 269.0
+margin_top = 8.0
+margin_right = 706.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 2 )
+text = "Current Score 0"

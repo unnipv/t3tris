@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Blocks/Block_S.gd" type="Script" id=1]
+[ext_resource path="res://Blocks/Basic_unit.tscn" type="PackedScene" id=2]
+
+
+
+[node name="Block_S" type="Spatial" groups=[
+"Tetris_piece",
+]]
+script = ExtResource( 1 )
+
+[node name="Basic_unit0" parent="." instance=ExtResource( 2 )]
+
+[node name="Basic_unit1" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0 )
+
+[node name="Basic_unit2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -1, 0 )
+
+[node name="Basic_unit3" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1, 0 )
+
+[node name="Timer" type="Timer" parent="."]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
