@@ -28,4 +28,4 @@ func update_score():
 	score+=10
 	
 func _process(delta):
-	($CanvasLayer/NinePatchRect/HBoxContainer/score).text="Score "+str(score)
+	($CanvasLayer/NinePatchRect/HBoxContainer/score).text="Current Score "+str(score)

@@ -2,7 +2,7 @@ extends Camera
 
 var mouse_sensitivity=800
 func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
 func _process(delta):
 	if(Input.is_action_just_pressed("move_forward")):

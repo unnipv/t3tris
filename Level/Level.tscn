@@ -10,7 +10,7 @@ albedo_color = Color( 0.396078, 0.137255, 0.101961, 1 )
 
 [sub_resource type="PlaneMesh" id=2]
 material = SubResource( 1 )
-size = Vector2( 5, 5 )
+size = Vector2( 8, 8 )
 
 [node name="Level" type="Spatial"]
 script = ExtResource( 2 )
