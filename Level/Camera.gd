@@ -1,6 +1,6 @@
 extends Camera
 
-var mouse_sensitivity=1200
+var mouse_sensitivity=800
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
@@ -13,6 +13,7 @@ func _process(delta):
 		translation.x-=1
 	if(Input.is_action_just_pressed("move_right")):
 		translation.x+=1
+		
 func _input(event):
 	if event is InputEventMouseMotion:
 		rotation=h_camera_rotation(-event.relative.x/mouse_sensitivity)

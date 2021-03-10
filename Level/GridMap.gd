@@ -1,8 +1,5 @@
 extends GridMap
 
-var columns
-var rows
-
 func _process(delta):
 	for y in range(-10,0):
 		var poss=1

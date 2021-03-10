@@ -12,7 +12,7 @@ albedo_color = Color( 0.396078, 0.137255, 0.101961, 1 )
 material = SubResource( 1 )
 size = Vector2( 5, 5 )
 
-[node name="Spatial" type="Spatial"]
+[node name="Level" type="Spatial"]
 script = ExtResource( 2 )
 
 [node name="GridMap" parent="." instance=ExtResource( 1 )]
