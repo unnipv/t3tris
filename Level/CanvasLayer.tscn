@@ -15,10 +15,11 @@ font_data = ExtResource( 2 )
 [node name="CanvasLayer" type="CanvasLayer"]
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_right = -153.0
-margin_bottom = -480.0
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -435.5
+margin_right = 435.5
+margin_bottom = 120.0
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
